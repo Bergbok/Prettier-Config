@@ -13,14 +13,13 @@ bun add -d @bergbok/prettier-config
 
 ```typescript
 // .prettierrc.js / prettier.config.js / .prettierrc.ts / prettier.config.ts / .prettierrc.mjs / prettier.config.mjs / .prettierrc.mts / prettier.config.mts
-import bergbokConfig from "@bergbok/prettier-config";
+import baseConfig from '@bergbok/prettier-config';
+import type { Config } from 'prettier';  // ts
+/** @type {import("prettier").Config} */ // js
 
-/**
- * @type {import("prettier").Config}
- */
 const config = {
-	...bergbokConfig,
-	semi: false,
+	...baseConfig,
+	semi: false
 };
 
 export default config;
