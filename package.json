@@ -9,15 +9,17 @@
 	"description": "Config for Prettier, an opinionated code formatter",
 	"license": "ISC",
 	"type": "module",
+	"types": "prettier.config.d.ts",
 	"exports": "./prettier.config.js",
 	"files": [
-		"prettier.config.js"
+		"prettier.config.js",
+		"prettier.config.d.ts"
 	],
 	"simple-git-hooks": {
 		"pre-commit": "bun pretty-quick --staged"
 	},
 	"scripts": {
-		"prettier": "prettier --write *.{json,js} **/*.yml"
+		"prettier": "prettier --write ."
 	},
 	"peerDependencies": {
 		"prettier": ">=3.0.0"
